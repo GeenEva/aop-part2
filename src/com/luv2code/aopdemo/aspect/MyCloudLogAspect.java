@@ -12,6 +12,6 @@ public class MyCloudLogAspect {
 
 	@Before("com.luv2code.aopdemo.aspect.LuvAOPExpressions.setter()")
 	public void logToCloudAdvice() {
-		System.out.println("\\n=====>>> Log it alllll to the CLOUDDDDD"  + getClass() + " ORDER = 1");
+		System.out.println("\n=====>>> Log it alllll to the CLOUDDDDD"  + getClass() + " ORDER = 1");
 	}
 }

@@ -21,6 +21,9 @@ public class MainDemoApp {
 				
 		
 		Account myAccount = new Account();
+		myAccount.setName("Evalola");
+		myAccount.setLevel("platinum");
+		
 		theAccountDAO.addAccount(myAccount, true);
 		theAccountDAO.doWork();
 	

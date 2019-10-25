@@ -7,14 +7,14 @@ public class MembershipDAO {
 
 	public boolean addSillyMember() {
 		
-		System.out.println(getClass() + ": DOING STUFF: ADDING A MEMBERSHIP ACCOUNT");
+		System.out.println("DOING STUFF: ADDING A MEMBERSHIP ACCOUNT" + getClass() );
 		
 		return true;
 	}
 
 	public void goToSleep() {
 		
-		System.out.println(getClass() + ": I'm going to sleep now...");
+		System.out.println("I'm going to sleep now..." +  getClass());
 		
 	}
 	

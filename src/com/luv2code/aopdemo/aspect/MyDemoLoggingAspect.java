@@ -7,6 +7,8 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+import com.luv2code.aopdemo.Account;
+
 @Aspect
 @Component
 @Order(2)
@@ -21,6 +23,20 @@ public class MyDemoLoggingAspect {
 		System.out.println("\n=====>>> Executing @Before advice on method " + getClass() + " ORDER = 2");		
 		
 		System.out.println("\n Method: " + methodSig);
+		
+		for(Object arg: theJoinPoint.getArgs()) {
+		
+			System.out.println("\n Method arguments: " + arg);
+		
+			if(arg instanceof Account) {
+				
+				Account theAccount = (Account) arg;
+				
+				System.out.println("\n Account name: " + theAccount.getName());
+				System.out.println("\n Account level: " + theAccount.getLevel());
+				
+			}
+		}
 	}
 	
 }
